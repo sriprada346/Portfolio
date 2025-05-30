@@ -1,2 +1,2 @@
 # Minimalist_Site
-Simple Website
+Minimalistic Portfolio
