@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -71,24 +72,39 @@ header {
 }
 
 .nav-link {
-    color: #666666;
-    text-decoration: none;
+    color: #666666 !important;
+    text-decoration: none !important;
     font-weight: 400;
     font-size: 13px;
     transition: all 0.2s ease;
     padding: 8px 16px;
     border-radius: 4px;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
 }
 
+.nav-link:link,
+.nav-link:visited,
+.nav-link:active,
+.nav-link:focus,
 .nav-link:hover {
-    color: #000000;
-    background-color: #f8f8f8;
+    color: #666666 !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
 }
 
 .nav-link.active {
-    color: #000000;
-    background-color: #f0f0f0;
+    color: #000000 !important;
+    background-color: #f0f0f0 !important;
+}
+
+.nav-link.active:link,
+.nav-link.active:visited,
+.nav-link.active:active,
+.nav-link.active:focus,
+.nav-link.active:hover {
+    color: #000000 !important;
+    background-color: #f0f0f0 !important;
 }
 
 .name {
@@ -124,30 +140,33 @@ header {
 }
 
 .social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #000000;
-    text-decoration: none;
-    padding: 12px 20px;
-    border: 1px solid #000000;
-    font-size: 13px;
-    font-weight: 400;
-    border-radius: 6px;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    padding: 6px 16px !important;
+    border: 1px solid #000000 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    border-radius: 6px !important;
     transition: all 0.2s ease;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
 }
 
-.social-link:hover {
-    background-color: #000000;
-    color: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.social-link:link,
+.social-link:visited,
+.social-link:active {
+    color: #000000 !important;
+    text-decoration: none !important;
 }
 
 .social-link .icon {
-    width: 16px;
-    height: 16px;
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
 }
 
 /* Featured Posts Section */
@@ -180,11 +199,6 @@ header {
     border-bottom: 1px solid #e8e8e8;
     gap: 25px;
     transition: all 0.2s ease;
-}
-
-.post:hover {
-    padding-left: 10px;
-    border-bottom-color: #000000;
 }
 
 .post:last-child {
@@ -305,7 +319,6 @@ header {
     transition: all 0.2s ease;
 }
 
-.filter-btn:hover,
 .filter-btn.active {
     border-color: #000000;
     color: #000000;
@@ -323,12 +336,6 @@ header {
     border-radius: 8px;
     transition: all 0.3s ease;
     background-color: #ffffff;
-}
-
-.blog-post:hover {
-    border-color: #000000;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .blog-title {
@@ -389,12 +396,6 @@ header {
     background-color: #ffffff;
 }
 
-.project-card:hover {
-    border-color: #000000;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
-}
-
 .project-header {
     display: flex;
     justify-content: space-between;
@@ -419,10 +420,6 @@ header {
     padding: 5px;
 }
 
-.project-link:hover {
-    color: #000000;
-}
-
 .project-description {
     font-size: 13px;
     color: #666666;
@@ -438,7 +435,7 @@ header {
 
 .tech-tag {
     background-color: #f8f8f8;
-    color: #333333;
+    color: #000000;
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 11px;
@@ -518,12 +515,6 @@ header {
     background-color: #ffffff;
 }
 
-.activity-card:hover {
-    border-color: #000000;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
 .activity-title {
     display: flex;
     align-items: center;
@@ -577,6 +568,7 @@ header {
     color: #666666;
 }
 
+/* Contact Links */
 .contact-links {
     display: flex;
     gap: 20px;
@@ -584,35 +576,62 @@ header {
     flex-wrap: wrap;
 }
 
-.contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #000000;
-    text-decoration: none;
-    padding: 12px 20px;
-    border: 1px solid #000000;
-    font-size: 13px;
-    border-radius: 6px;
+/* .contact-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    padding: 6px 16px !important;
+    border: 1px solid #000000 !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
     transition: all 0.2s ease;
+    white-space: nowrap !important;
+    min-width: fit-content !important;
+    box-sizing: border-box !important;
+    background-color: #ffffff !important;
+} */
+
+.contact-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    padding: 6px 16px !important;
+    border: 1px solid #000000 !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease;
+    background-color: #ffffff !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.contact-link:hover {
-    background-color: #000000;
-    color: #ffffff;
-    transform: translateY(-1px);
+.contact-link:link,
+.contact-link:visited,
+.contact-link:active {
+    color: #000000 !important;
+    text-decoration: none !important;
 }
 
 .contact-link .icon {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 0 30px;
+    }
+    
+    .nav {
+        padding: 15px 0;
     }
     
     .nav-list {
@@ -719,6 +738,55 @@ header {
     .featured-posts {
         margin-top: 30px;
     }
+    
+    /* Fix for Now section contact links */
+    .now-section .contact-links {
+        margin-top: 30px;
+    }
+    
+    .now-section .contact-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        font-weight: 400;
+        border-width: 1px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Mobile-specific fix for Now section contact links */
+    .now-section .contact-section .contact-links {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+    
+    .now-section .contact-section .contact-link {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        color: #000000 !important;
+        text-decoration: none !important;
+        padding: 6px 16px !important;
+        border: 1px solid #000000 !important;
+        font-size: 14px !important;
+        border-radius: 6px !important;
+        transition: all 0.2s ease !important;
+        white-space: nowrap !important;
+        min-width: fit-content !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        background-color: #ffffff !important;
+    }
+    
+    .now-section .contact-section .contact-link .icon {
+        width: 14px !important;
+        height: 14px !important;
+        flex-shrink: 0 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -728,6 +796,10 @@ header {
     
     .container {
         padding: 0 20px;
+    }
+    
+    .nav {
+        padding: 10px 0;
     }
     
     .nav-list {
@@ -752,18 +824,28 @@ header {
     .contact-links {
         flex-direction: column;
         align-items: stretch;
+        gap: 12px;
     }
     
     .social-link,
     .contact-link {
         justify-content: center;
-        gap: 6px;
+        gap: 8px;
+        padding: 12px 16px;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: visible;
+        min-height: 44px;
+        box-sizing: border-box;
     }
     
     .social-link .icon,
     .contact-link .icon {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
     }
     
     .activity-icon {
@@ -794,12 +876,15 @@ header {
 
 /* Focus states for accessibility */
 .nav-link:focus,
-.social-link:focus,
-.contact-link:focus,
-.filter-btn:focus,
 .project-link:focus {
     outline: 2px solid #000000;
     outline-offset: 2px;
+}
+
+.social-link:focus,
+.contact-link:focus,
+.filter-btn:focus {
+    outline: none;
 }
 
 /* Smooth scrolling */
@@ -824,4 +909,46 @@ html {
 /* Utility classes */
 .hidden {
     display: none !important;
+}
+
+/* Specific fix for Now section contact links - Higher specificity */
+.now-section .contact-section .contact-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+}
+
+.now-section .contact-section .contact-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    padding: 6px 16px !important;
+    border: 1px solid #000000 !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+    min-width: fit-content !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    background-color: #ffffff !important;
+}
+
+.now-section .contact-section .contact-link:link,
+.now-section .contact-section .contact-link:visited,
+.now-section .contact-section .contact-link:active {
+    color: #000000 !important;
+    text-decoration: none !important;
+}
+
+.now-section .contact-section .contact-link .icon {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+    stroke: currentColor !important;
 }
