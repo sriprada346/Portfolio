@@ -40,7 +40,6 @@ Minimal_Site/
 ├── style.css               # Stylesheet with responsive design
 ├── script.js              # JavaScript for navigation and interactions
 ├── Sriprada_Upadya.pdf    # Resume file
-├── PENDING_UPDATES.md     # Development roadmap and todo list
 └── README.md              # Project documentation
 ```
 
