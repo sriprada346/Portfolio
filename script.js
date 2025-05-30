@@ -235,7 +235,7 @@ function createRipple(element) {
     // Add ripple animation styles
     ripple.style.position = 'absolute';
     ripple.style.borderRadius = '50%';
-    ripple.style.background = 'rgba(0, 0, 0, 0.1)';
+    ripple.style.background = 'rgba(128, 128, 128, 0.3)';
     ripple.style.transform = 'scale(0)';
     ripple.style.animation = 'ripple 0.6s linear';
     
@@ -299,12 +299,3 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-// Theme management (for future dark mode)
-function initTheme() {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    // Theme switching functionality can be added here
-}
-
-// Initialize theme
-// initTheme();
